@@ -86,26 +86,54 @@ html, body {
   }
   
 
+/* 整體容器設置 */
 .homepage-text {
     display: flex;
-    flex-direction: column; /* 垂直排列 */
-    justify-content: center; /* 垂直居中 */
-    align-items: flex-start; /* 水平左對齊 */
-    height: 92vh;
-    width: 33%; /* 設定寬度為視窗的 1/3 */
-    margin-left: 10%;
+    flex-direction: row; /* 改為水平排列 */
+    justify-content: space-between; /* 左右兩側均分 */
+    align-items: flex-start; /* 垂直對齊 */
+    height: 92vh; /* 確保高度固定 */
+    width: 100%; /* 滿寬 */
+    padding: 0 10%; /* 左右留白 */
+    gap: 20px; /* 左右內容間距 */
 }
 
-.homepage-text h1 {
+/* 左側內容樣式 */
+.left-content {
+    flex: 1; /* 左側占用相等空間 */
+    display: flex;
+    flex-direction: column; /* 內部垂直排列 */
+    justify-content: center; /* 垂直居中 */
+    margin-top: 130px; /* 調整 Text 區域向下移 */
+}
+
+.left-content h1 {
     font-size: 60px;
     text-transform: uppercase;
     margin-bottom: 20px; /* 與 p 的間距 */
 }
 
-.homepage-text p {
+.left-content p {
     line-height: 28px;
     width: 100%; /* 讓段落填滿容器 */
 }
+
+/* 右側內容樣式 */
+.right-content {
+    flex: 2; /* 右側占用更多空間 */
+    display: flex;
+    flex-direction: column; /* 垂直排列結果 */
+    align-items: flex-start; /* 結果靠左 */
+    justify-content: flex-start; /* 結果從頂部開始 */
+}
+
+#result {
+    width: 100%; /* 填滿右側容器 */
+    display: flex;
+    flex-wrap: wrap; /* 多個結果換行 */
+    gap: 20px; /* 結果間距 */
+}
+
 /* Icon 列表樣式 */
 .social-icons {
     list-style: none; /* 移除列表樣式 */
@@ -316,3 +344,41 @@ html, body {
 .contact-us form button:hover {
     background-color: #037070;
 }
+
+/*result*/
+
+#result .result-item {
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 15px;
+}
+#result img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  #result .image-section {
+    margin: 0;
+  }
+  #result .text-section {
+    margin: 0;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+  }
+  #result h2 {
+    color: #000;
+    font-size: 20px;
+    margin: 0;
+    margin-bottom: 5px;
+  }
+  
+  #result p {
+    color: #a39a9a;
+    font-size: 14px;
+    margin: 0;
+  }
+    
