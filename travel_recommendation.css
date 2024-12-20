@@ -231,3 +231,88 @@ html, body {
     border-radius: 5px;
     margin-top: 10px;
 }
+
+
+/* Contact us*/
+/* Contact Us 容器 */
+.contact-us {
+    display: flex; /* 使用 Flexbox */
+    justify-content: center; /* 水平居中 */
+    align-items: flex-start; /* 從上方開始排列 */
+    gap: 20px; /* Text 和 Form 之間的間距 */
+    margin: 80px auto; /* 調整整個區域的位置 */
+    width: 80%; /* 可用寬度占整體的 80% */
+    max-width: 1200px; /* 添加最大寬度限制 */
+}
+
+/* Text 區域 */
+.contact-us .text {
+    flex: 1; /* 占用 50% 的寬度 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 垂直居中 */
+    align-items: flex-start; /* 左對齊 */
+    text-align: left; /* 保持文字左對齊 */
+    margin-top: 130px; /* 調整 Text 區域向下移 */
+}
+
+.contact-us .text h1 {
+    font-size: 60px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-us .text p {
+    font-size: 24px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* 表單區域 */
+.contact-us form {
+ 
+    overflow: hidden;
+    flex: 1; /* 占用 50% 的寬度 */
+    display: flex;
+    flex-direction: column; /* 表單項目垂直排列 */
+    gap: 15px; /* 表單項目之間的間距 */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 65px; /* 調整 Form 區域向下移 */
+}
+
+/* 表單標籤 */
+.contact-us form label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* 表單輸入框 */
+.contact-us form input,
+.contact-us form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* 按鈕樣式 */
+.contact-us form button {
+    padding: 10px;
+    background-color: #008080;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-us form button:hover {
+    background-color: #037070;
+}
