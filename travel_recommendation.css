@@ -1,5 +1,19 @@
+/* 根元素設置，方便等分計算 */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* 確保高度為整屏 */
+    overflow-x: hidden; /* 禁止水平滾動 */
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
 /* 搜尋區域容器 */
 .navbar {
+    height: 8vh; /* 保留 8% 的高度給導航欄 */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -9,15 +23,22 @@
     border-bottom: 1px solid rgb(34, 34, 34);
 }
 
+/* 中間導航欄 */
 .navbar-center {
     display: flex;
-    gap: 15px;
+    justify-content: center; /* 將導航連結居中對齊 */
+    gap: 30px; /* 增加連結之間的間距 */
 }
+
 .navbar-center a {
     color: rgb(255, 255, 255);
     font-size: 1rem;
     text-decoration: none;
     transition: color 0.3s;
+}
+
+.navbar-center a:hover {
+    color: #037070; /* 懸停效果 */
 }
 .navbar-right .search-container {
     display: flex;
@@ -127,3 +148,86 @@
     align-items: center; /* 居中對齊內容 */
   }
   
+/* About Us 容器 */
+.about-us {
+    margin-top: 40px; /* 向下移動更多 */
+    margin-left: 100px; /* 避開社交圖標的寬度 */
+    padding-left: 20px;
+    left: 50px; /* 調整位置靠右 */
+    width: calc(100% - 200px); /* 避開左側圖標區域 */
+    max-width: 1220px; /* 添加最大寬度 */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  .about-us h1 {
+    font-size: 60px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  
+  .about-us p {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px;
+    width: 300px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    line-height: 28px;
+    width: 100%; /* 讓段落填滿容器 */
+    color: #333;
+  }
+
+/* Team Section */
+.team-section {
+    flex: 1; /* 占據 50% 寬度 */
+    margin-left: 150px; /* 與 about-us 對齊 */
+    padding-left: 20px;
+    margin-top: 50px; /* 與 About Us 保持間距 */
+    width: calc(100% - 110px); /* 避開左側圖標區域 */
+    display: flex;
+    align-items: center; /* 讓所有內容垂直居中 */
+    gap: 20px; /* 卡片與標題之間的間距 */
+    justify-content: flex-start; /* 從左對齊 */
+    flex-wrap: wrap; /* 如果內容超出，換行 */
+}
+
+.team-section h2 {
+    font-size: 36px;
+    text-transform: uppercase;
+    color: #333;
+    margin: 0; /* 移除下方間距 */
+    flex-shrink: 0; /* 標題不會壓縮 */
+    white-space: nowrap; /* 確保標題在一行內 */
+}
+
+.team-member {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 20px;
+    width: 300px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.team-info h3 {
+    margin: 10px 0;
+}
+
+.team-info p {
+    font-size: 14px;
+    color: #555;
+    margin: 10px 0;
+}
+
+.team-info h4 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #037070;
+    background-color: #f3f3f3;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
